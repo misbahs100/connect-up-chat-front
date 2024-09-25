@@ -29,7 +29,7 @@ export default function CustomPasswordInput ({ label, value, onChange, name, pla
           className="absolute inset-y-0 right-0 px-2.5 py-2.5 text-gray-400 focus:outline-none"
           onClick={togglePasswordVisibility}
         >
-          {showPassword ? <BiSolidHide className="w-5 h-5" /> : <BiShow className="w-5 h-5" />}
+          {showPassword ? <p>hide</p> : <p>show</p>}
         </button>
       </div>
     </div>

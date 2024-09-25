@@ -80,6 +80,27 @@ export const reducer = (state = initialState, action) => {
                 isSearchUserSuccess: false,
                 searchedUser: [],
             };
+        case types.FIND_ALL_USERS_PROCESSING:
+            return {
+                ...state,
+                isSearchUserProcessing: true,
+                isSearchUserSuccess: false,
+                searchedUser: [],
+            };
+        case types.FIND_ALL_USERS_SUCCESS:
+            return {
+                ...state,
+                isSearchUserProcessing: false,
+                isSearchUserSuccess: true,
+                searchedUser: payload, // Update searchedUser with all users
+            };
+        case types.FIND_ALL_USERS_FAIL:
+            return {
+                ...state,
+                isSearchUserProcessing: false,
+                isSearchUserSuccess: false,
+                searchedUser: [],
+            };
         case types.SINGLE_CHAT_CREATE_PROCESSING:
             return {
                 ...state,

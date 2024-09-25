@@ -17,6 +17,7 @@ const DisplayChatCard = ({ item }) => {
 
   // Find the user from item that doesn't match the _id in parsedData
   const selectedUser = item.users.find(user => user._id !== parsedData._id);
+  console.log(selectedUser);
 
   return (
     <div onClick={handelSelectUserForChat} className="bg-primary-100 cursor-pointer rounded-lg shadow-md mt-3 hover:shadow-lg hover:ring-2 hover:ring-primary-200 hover:bg-primary-200 transition-shadow duration-200">

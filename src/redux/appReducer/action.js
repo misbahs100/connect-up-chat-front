@@ -28,6 +28,23 @@ const searchUsers = (query) => async (dispatch) => {
   }
 };
 
+// find all users
+const findAllUsers = () => async (dispatch) => {
+  dispatch({ type: types.FIND_ALL_USERS_PROCESSING });
+  
+  try {
+    const result = await axios.get(`${END_POINT}/api/user/all`, {
+      headers: {
+        Authorization: jwtToken()
+      }
+    });
+    dispatch({ type: types.FIND_ALL_USERS_SUCCESS, payload: result.data });
+  } catch (error) {
+    dispatch({ type: types.FIND_ALL_USERS_FAIL });
+  }
+};
+
+
 // creating one to one chat
 const createSingleUserChat = (userId) => async (dispatch) => {
   dispatch({ type: types.SINGLE_CHAT_CREATE_PROCESSING });
@@ -232,4 +249,4 @@ const removeMembersFromGroup = (obj) => async (dispatch) => {
 }
 
 
-export { searchUsers, createSingleUserChat, getChats, createGroup, addMembersInGroup, removeMembersFromGroup, changeGroupName, selectUserForChat, sendMessage, getMessage, setWebSocketReceivedMessage };
+export { searchUsers, findAllUsers, createSingleUserChat, getChats, createGroup, addMembersInGroup, removeMembersFromGroup, changeGroupName, selectUserForChat, sendMessage, getMessage, setWebSocketReceivedMessage };
