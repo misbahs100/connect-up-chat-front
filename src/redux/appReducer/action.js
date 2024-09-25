@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as types from "./actionType";
 
-const END_POINT = "http://localhost:8080"
+const END_POINT = "https://connect-up-chat-back.onrender.com"
 
 const jwtToken = () => {
   const userData = JSON.parse(localStorage.getItem("chat-app-login-user-data"));

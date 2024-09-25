@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getChats, findAllUsers } from '../../redux/appReducer/action'; // Import findAllUsers action
 import CreateGroupChat from './AllChats/CreateGroupChat';
 import DisplayChatCard from './AllChats/DisplayChatCard';
+import SearchUsers from '../SearchUsers';
 
 export default function AllChats() {
 
@@ -25,7 +26,7 @@ export default function AllChats() {
 
   return (
     <div className="flex flex-col flex-grow p-2 mt-3 ">
-
+      <SearchUsers />
       <CreateGroupChat />
 
       <div className='bg-primary-800 mt-3 rounded-lg p-2'>

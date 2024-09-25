@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className="lg:hidden">
               <SmallScreenAllChats />
             </div>
-            <SearchUsers />
+            {/* <SearchUsers /> */}
           </section>
 
           <section className="flex flex-wrap gap-4 items-center">

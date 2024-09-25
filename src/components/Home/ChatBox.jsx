@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BsEmojiSmile, BsSendFill } from 'react-icons/bs';
+import { BsEmojiSmile, BsFile, BsSendFill } from 'react-icons/bs';
 import Message from './ChatBox/Mesaage';
 import ChatHeader from './ChatBox/ChatHeader';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,6 +7,9 @@ import logo from '../../assets/logo1.png';
 import { toast, ToastContainer } from 'react-toastify';
 import ScrollableFeed from 'react-scrollable-feed'
 import { sendMessage, setWebSocketReceivedMessage } from '../../redux/appReducer/action';
+import { FaRegFileAlt } from 'react-icons/fa';
+import { RiGalleryLine } from "react-icons/ri";
+
 
 export default function ChatBox() {
   const selectedUserForChat = useSelector((state) => state.appReducer.selectedUserForChat);
@@ -117,6 +120,12 @@ export default function ChatBox() {
           <button type="button" className="absolute inset-y-0 right-10 px-8 py-2.7 text-primary-800 focus:outline-none">
             <BsEmojiSmile className="w-5 h-5" />
           </button>
+          <button type="button" className="absolute inset-y-0 right-20 px-8 py-2.7 text-primary-800 focus:outline-none">
+            <FaRegFileAlt className="w-5 h-5" />
+          </button>
+          <button type="button" className="absolute inset-y-0 right-32 px-8 py-2.7 text-primary-800 focus:outline-none">
+            <RiGalleryLine className="w-5 h-5" />
+          </button>
           <button
             disabled={sendMessageProcessing}
             type="button"
@@ -129,7 +138,7 @@ export default function ChatBox() {
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
               </div>
             ) : (
-              'Send'
+              'Go'
             )}
           </button>
         </div>

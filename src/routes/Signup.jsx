@@ -172,11 +172,11 @@ const Signup = () => {
             </div>
 
             {/* Right Side - Image and Text */}
-            <div className="hidden md:flex w-1/2 items-center justify-center bg-primary-700">
+            <div className="hidden md:flex w-1/2 items-center justify-center bg-slate-200">
                 <div className="text-center text-white px-6">
                     <img src={logo} alt="illustration" className="max-w-full h-auto mx-auto mb-6" />
-                    <h2 className="text-2xl font-bold">Welcome to Connect Up Chat!</h2>
-                    <p className="mt-4 text-lg">
+                    <h2 className="text-2xl font-bold text-primary-700">Welcome to Connect Up Chat!</h2>
+                    <p className="mt-4 text-lg text-primary-700">
                         Join us today and stay connected with the world. Enjoy seamless messaging and collaboration.
                     </p>
                 </div>

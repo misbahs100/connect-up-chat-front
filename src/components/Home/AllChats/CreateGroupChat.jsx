@@ -89,14 +89,26 @@ export default function CreateGroupChat() {
 
     return (
         <section>
-            <button
+            {/* <button
                 onClick={toggleModal}
                 className="flex border-2 border-primary-400 items-center gap-2 text-white bg-primary-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                 type="button"
             >
                 <AiOutlinePlus size={"20px"} />
                 Create Group
-            </button>
+            </button> */}
+
+            <div className="flex flex-col flex-grow  mt-3 ">
+                <button
+                    className="bg-primary-800 text-white p-2 rounded-full hover:bg-primary-700 focus:outline-none"
+                    onClick={toggleModal}
+                >
+                    <div className="flex">
+                        <AiOutlinePlus className="w-6 h-6 mr-4" /> <p>Create Group</p>
+                    </div>
+                </button>
+            </div>
+
 
             {isModalVisible && (
                 <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50 backdrop-filter backdrop-blur-sm">

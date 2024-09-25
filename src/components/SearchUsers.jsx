@@ -39,7 +39,9 @@ export default function SideBar() {
         className="bg-primary-800 text-white p-2 rounded-full hover:bg-primary-700 focus:outline-none"
         onClick={handleOpenSidebar}
       >
-        <BiSearchAlt className="w-6 h-6" />
+        <div className="flex">
+        <BiSearchAlt className="w-6 h-6 mr-4" /> <p>Search User</p>
+        </div>
       </button>
 
       {/* sidebar */}
